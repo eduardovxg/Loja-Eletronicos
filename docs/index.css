@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 :root {
       --azul-escuro: #00001a;
       --azul-medio: #00003a;
@@ -9,7 +13,10 @@
       --card-bg: rgba(0, 10, 40, 0.85);
       --borda: rgba(0, 245, 255, 0.2);
     }
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+.retanguloCima{
+    margin-left: 30px;
+}
 
 body {
       background-color: var(--azul-escuro);
@@ -30,7 +37,8 @@ body::before {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+
 }
 .imgitens{
     height: 400px;
@@ -38,5 +46,51 @@ body::before {
     object-fit: cover;
     border-radius: 50%;
     padding: 20px;
-    margin-left: 250px;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+}
+.imgitens:hover{
+     box-shadow: 0px 5px 15px  rgba(0, 247, 255, 0.64); 
+     color: var(--neon-ciano);
+     transform: translateY(-5px);
+}
+.containerSobreitens{
+    margin-bottom:20px;
+    position: relative;
+    width: 100vh;
+    height: 30vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+.TextoItem{
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+.containerTexto {
+    display: flex;
+    flex-direction: column;  /* empilha texto em cima, botão embaixo */
+    align-items: flex-start; /* alinha à esquerda */
+    gap: 20px;               /* espaço entre texto e botão */
+    align-items: end;
+}
+.Comprar {
+    
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+}
+.Comprar:hover{
+     box-shadow: 0px 5px 15px  rgba(0, 245, 255, 0.2); 
+     color: var(--neon-ciano);
+     transform: translateY(-5px);
 }
