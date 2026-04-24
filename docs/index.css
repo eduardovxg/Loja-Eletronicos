@@ -1,15 +1,30 @@
-body{
-    margin: 0;
-    background:  rgba(0, 0, 58, 0.859);
-    display: flex;
-    flex-direction: column;
-}
-.retanguloCima{
-    color: rgb(255,255,255);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+:root {
+      --azul-escuro: #00001a;
+      --azul-medio: #00003a;
+      --neon-ciano: #00f5ff;
+      --neon-roxo: #bf00ff;
+      --neon-rosa: #ff006e;
+      --branco: #e8f4ff;
+      --cinza: #8899aa;
+      --card-bg: rgba(0, 10, 40, 0.85);
+      --borda: rgba(0, 245, 255, 0.2);
+    }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      font-family: 'Rajdhani', sans-serif;
+    }
+body::before {
+      position: fixed;
+      background-image:
+        linear-gradient(rgba(0,245,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,245,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+.ponto{
+    color: var(--neon-roxo);
 }
 .containerCentral{
     flex: 1;
