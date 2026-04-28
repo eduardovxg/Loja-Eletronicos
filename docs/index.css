@@ -41,8 +41,8 @@ body::before {
 
 }
 .imgitens{
-    height: 400px;
-    width: 350px;
+    height: 320px;
+    width: 270px;
     object-fit: cover;
     border-radius: 50%;
     padding: 20px;
@@ -54,6 +54,7 @@ body::before {
      transform: translateY(-5px);
 }
 .containerSobreitens{
+    margin-right: 90px;
     margin-bottom:20px;
     position: relative;
     width: 100vh;
@@ -63,25 +64,27 @@ body::before {
     justify-content: flex-start;
     align-items: center; 
 }
-.TextoItem{
-    color: #fff;
-    font-size: 3rem;
+.containerTexto {
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
-}
-.containerTexto {
     display: flex;
     flex-direction: column;  /* empilha texto em cima, botão embaixo */
-    align-items: flex-start; /* alinha à esquerda */
+    align-items: center; /* alinha à esquerda */
     gap: 20px;               /* espaço entre texto e botão */
-    align-items: end;
+}
+.TextoItem{
+    color: #fff;
+    font-size: 2rem;
+}
+.QtDisponivel{
+    opacity: 0;
+    background-color: var(--card-bg);
+    transition: opacity 1.0s ease,box-shadow 4.8s ease, transform 4.8s ease;
+    transform: translateY(-5px);
 }
 .Comprar {
-    
     color: #fff;
     font-size: 1rem;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: bold;
     background-color: var(--card-bg);
     border-radius: 10px;
     padding: 10px 20px;
@@ -92,5 +95,11 @@ body::before {
 .Comprar:hover{
      box-shadow: 0px 5px 15px  rgba(0, 245, 255, 0.2); 
      color: var(--neon-ciano);
+     transform: translateY(-5px);
+}
+.Comprar:hover + .QtDisponivel{
+     opacity: 1;
+     box-shadow: 0px 5px 15px  rgba(0, 245, 255, 0.2); 
+     color: white;
      transform: translateY(-5px);
 }
